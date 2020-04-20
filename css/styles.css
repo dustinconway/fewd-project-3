@@ -27,7 +27,7 @@ h2  {
 p   {
     font-size: 1.2rem;
     color: #9e9e9e;
-    padding: 0 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .headline   {
@@ -50,7 +50,7 @@ legend    {
     color: #2d3945;
     font-size: 1.7em;
     font-weight: bold;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: left;
 }
 
@@ -58,31 +58,60 @@ legend    {
 .newsletter    {
     border: hidden;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
 }
 
 label {
     color: #8f9dac;
     font-size: 1.2em;
+    margin: 0 0 0 10px;
 }
 
 input[type=text],
 input[type=email],
-input[type=tel],
-textarea,
-select {
+input[type=tel] {
     display: block;
     width: 100%;
     margin: 10px 0;
-    padding: 20px 10px;
+    padding: 20px 0;
     background-color: #EFF0F1;
     border: 0 none #000000;
     border-radius: 5px;
     font-size: 1.2rem;
 }
 
+textarea    {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    margin: 10px 0;
+    height: 40px;
+    background-color: #EFF0F1;
+    border: 0 none #000000;
+    border-radius: 5px;
+    font-size: 1.2rem; 
+}
+
+select  {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px 0;
+    background-color: #EFF0F1;
+    border: 0 none #000000;
+    border-radius: 5px;
+    font-size: 1.2rem; 
+}
+
 input[id=zip]   {
+    display: block;
     width: 50%;
+    margin: 10px 0;
+    padding: 20px 0;
+    background-color: #EFF0F1;
+    border: 0 none #000000;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
 
 input::placeholder {
@@ -90,10 +119,6 @@ input::placeholder {
     font-style: italic;
     padding-right: 30px;
     color: #adb2b7;
-}
-
-select  {
-    padding: 25px 0;
 }
 
 input:focus,
@@ -104,8 +129,44 @@ select:focus {
   transition: background-color 0.5s ease-in-out;
 }
 
+.contact    {
+    padding: 0 0 30px 0;
+    border-bottom: 3px solid #000000;
+}
 
+.newsletter-container   {
+    margin: 0 0 10px 0;
+}
 
+.newsletter-checkbox,
+.newsletter-radio   {
+  margin: 0 0 20px;
+}
+
+label[for=text-area]    {
+    margin: 0;
+}
+
+.newsletter-container {
+    margin-bottom: 20px;
+}
+
+button  {
+    background-color: #4ebbb5;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    padding: 30px 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+footer p    {
+    text-align: center;
+    margin: 20px 0;
+}
 
 
 /*=========================================
@@ -113,5 +174,38 @@ media queries
 ==========================================*/
 
 @media (min-width: 768px) {
-    
+    main,
+    .headline   {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .contact,
+    .newsletter {
+      margin: 0;
+    }
+  
+    button {
+      margin: 0 0 20px;
+      width: 100%;
+    }
+  
+    .contact-info {
+      display: flex;
+      align-items: center;
+    }
+  
+    .contact-info input,
+    .contact-info select {
+      width: auto;
+      flex-grow: 1;
+    }
+  
+    .contact-info label {
+      flex-basis: 25%;
+    }
+  
+    .contact-info:last-child input {
+      margin-right: 20%;
+    }
   }

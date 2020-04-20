@@ -17,11 +17,13 @@
         </div>
     </header>
     
+    <main>
+
     <form action="index.html" method="post">
 
     <fieldset class="contact">
           
-        <legend>Contact Information</legend>
+    <legend>Contact Information</legend>
     <div class="contact-info">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="user_name" placeholder="Required" required>
@@ -110,18 +112,41 @@
     <fieldset class="newsletter">
           
         <legend>Newsletter</legend>
-        
-        <label>Select the newsletter you would like to recieve</label>
+
+        <div class="newsletter-container">
+        <p>Select the newsletter you would like to recieve</p>
+
+        <div class="newsletter-checkbox">
         <input type="checkbox" id="html-news" value="news-1" name="type"><label class="light" for="html-news">HTML News</label><br>
+        </div>
+
+        <div class="newsletter-checkbox">
         <input type="checkbox" id="css-news" value="news-2" name="css-news"> <label class="light" for="css-news">CSS News</label><br>
+        </div>
+
+        <div class="newsletter-checkbox">
         <input type="checkbox" id="javascript-news" value="news-3" name="javascript-news"><label class="light" for="javascript-news">Javascript News</label>
-     
-        <label>Newsletter format</label>
+        </div>
+
+        </div>
+
+        <div class="newsletter-container">
+        <p>Newsletter format</p>
+
+        <div class="newsletter-radio">
         <input type="radio" id="html-format" value="format-1" name="format"><label for="html-format" class="light">HTML</label><br>
+        </div>
+
+        <div class="newsletter-radio">
         <input type="radio" id="text-format" value="format-2" name="format"><label for="text-format" class="light">Plain text</label>
-        
+        </div>
+
+        </div>
+
+        <div class="newsletter-container">
         <label for="text-area">Other topics you'd like to hear about</label>
         <textarea id="text-area" name="user_text-area"></textarea>
+        </div>
 
       </fieldset>
 
@@ -132,6 +157,6 @@
       <footer>
         <p>Copyright The Code Review</p>
       </footer>
-
+    </main>
 </body>
 </html>
